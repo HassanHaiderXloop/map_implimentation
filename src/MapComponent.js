@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "leaflet-draw/dist/leaflet.draw.css";
 
 
+
 const MapComponent = () => {
   const center = [24.8083, 67.0225];
 
@@ -58,12 +59,13 @@ const MapComponent = () => {
 
   return (
     <div className="App">
-      <MapContainer center={center} zoom={15} style={{ height: "100vh", width: "100%" }}>
+      <MapContainer center={center} zoom={15} style={{ height: "100vh", width: "100%"}}>
         <TileLayer
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         />
         <MyShapes shapesData={shapesData} />
+        
       </MapContainer>
     </div>
   );

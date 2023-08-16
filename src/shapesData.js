@@ -12,7 +12,8 @@ const shapesData  = {
               label: "Hexagon",
               owner: "Hassan",
               address: "Address 1",
-              currentPrice: "$1,000,000"
+              currentPrice: "$1,000,000",
+              
             }
           },
           geometry: {
@@ -29,6 +30,7 @@ const shapesData  = {
             ]
           }
         },
+        
         // Hexagon 2
         {
           type: "Feature",
@@ -45,12 +47,12 @@ const shapesData  = {
             type: "Polygon",
             coordinates: [
               [
-                [67.033, 24.806],
-                [67.0332, 24.8065],
-                [67.0328, 24.8067],
-                [67.0325, 24.8063],
-                [67.0327, 24.8058],
-                [67.033, 24.806]
+                [67.03024, 24.80396],
+                [67.03035, 24.80391],
+                [67.03045, 24.80386],
+                [67.03034, 24.80367],
+                [67.03014, 24.80376],
+                [67.03024, 24.80395]
               ]
             ]
           }
@@ -64,7 +66,8 @@ const shapesData  = {
               label: "Zia",
               owner: "Owner 3",
               address: "Address 3",
-              currentPrice: "$1,200,000"
+              currentPrice: "$1,200,000",
+              saleDate: "2023-03-11"
             }
           },
           geometry: {
@@ -81,6 +84,85 @@ const shapesData  = {
             ]
           }
         },
+        {
+          "type": "FeatureCollection",
+          "features": [
+            {
+              "type": "Feature",
+              "properties": {
+                "id": 7,
+                "data": {
+                  "label": "Zia",
+                  "owner": "Owner 3",
+                  "address": "Address 3",
+                  "currentPrice": "$1,200,000",
+                  "saleDate" : "2023-05-16"
+                }
+              },
+              "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                  [
+                    [67.03116314902445, 24.805306988436982],
+                    [67.03107503783235, 24.805160727099803],
+                    [67.03121386263237, 24.80509128930801],
+                    [67.03130243653663, 24.80523863727325],
+                    [67.03116314902445, 24.805306988436982]
+                  ]
+                ]
+              }
+            },
+            {
+              "type": "Feature",
+              "properties": {
+                "id": 7,
+                "data": {
+                  "label": "Zia",
+                  "owner": "Owner 3",
+                  "address": "Address 3",
+                  "currentPrice": "$1,200,000"
+                }
+              },
+              "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                  [
+                    [67.0310034653032, 24.805385160900755],
+                    [67.03091507697869, 24.80523757304266],
+                    [67.03105523286925, 24.805169174364053],
+                    [67.03114285426693, 24.805315369965214],
+                    [67.0310034653032, 24.805385160900755]
+                  ]
+                ]
+              }
+            },
+            {
+              "type": "Feature",
+              "properties": {
+                "id": 7,
+                "data": {
+                  "label": "Zia",
+                  "owner": "Owner 3",
+                  "address": "Address 3",
+                  "currentPrice": "$1,200,000"
+                }
+              },
+              "geometry": {
+                "type": "Polygon",
+                "coordinates": [
+                  [
+                    [67.03083473700451, 24.805459034357824],
+                    [67.03074581682884, 24.805312712553288],
+                    [67.03088566630146, 24.805243634419895],
+                    [67.03097396610369, 24.805391082579135],
+                    [67.03083473700451, 24.805459034357824]
+                  ]
+                ]
+              }
+            }
+          ]
+        }
+        ,
         {
           type: "Feature",
           properties: {

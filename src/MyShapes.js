@@ -11,27 +11,29 @@ const MyShapes = ({ shapesData }) => {
     setShowShapes(currentZoom >= 15);
   });
 
+  const SIX_MONTHS_IN_MILLISECONDS = 6 * 30 * 24 * 60 * 60 * 1000;
 
   const getStyleForFeature = (feature) => {
-    // Example: Style polygons differently based on their type
-    if (feature.geometry.type === "Polygon") {
+    const saleDate = new Date(feature.properties.data.saleDate);
+    const currentDate = new Date();
+    const isWithinPast6Months = currentDate - saleDate <= SIX_MONTHS_IN_MILLISECONDS;
+
+    if (isWithinPast6Months) {
+      return { color: "red", fillColor: "lightpink", fillOpacity: 0.6 };
+    } else {
       return { color: "blue", fillColor: "lightblue", fillOpacity: 0.6 };
-    } else if (feature.geometry.type === "Point") {
-      return { color: "green", fillColor: "lightgreen", fillOpacity: 0.6 };
     }
-    // Add more style conditions if needed
-    return { color: "red" }; // Default style
   };
 
   const onEachFeature = (feature, layer) => {
-    // Example: Bind a popup with feature details
-    const { label, owner, address, currentPrice } = feature.properties.data;
+    const { label, owner, address, currentPrice, saleDate } = feature.properties.data;
     layer.bindPopup(
       `<div>
         <h4>${label}</h4>
         <p><strong>Owner:</strong> ${owner}</p>
         <p><strong>Address:</strong> ${address}</p>
         <p><strong>Current Price:</strong> ${currentPrice}</p>
+        <p><strong>Sale Date:</strong> ${saleDate}</p>
       </div>`
     );
   };
@@ -50,5 +52,3 @@ const MyShapes = ({ shapesData }) => {
 };
 
 export default MyShapes;
-
-
