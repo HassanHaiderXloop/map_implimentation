@@ -19,9 +19,9 @@ const MyShapes = ({ shapesData }) => {
     const isWithinPast6Months = currentDate - saleDate <= SIX_MONTHS_IN_MILLISECONDS;
 
     if (isWithinPast6Months) {
-      return { color: "red", fillColor: "lightpink", fillOpacity: 0.6 };
+      return { color: "red", fillColor: "lightpink", fillOpacity: 0.6 , weight : 1};
     } else {
-      return { color: "blue", fillColor: "lightblue", fillOpacity: 0.6 };
+      return { color: "blue", fillColor: "lightblue", fillOpacity: 0.6 , weight : 1 };
     }
   };
 

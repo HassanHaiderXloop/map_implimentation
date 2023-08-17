@@ -1,16 +1,15 @@
 import React from 'react';
-import MapComponent from './MapComponent';
-
+import MapContain from './MapContain';
 
 function App() {
  
   return (
     <div className="App">
-    <MapComponent/>
-  
-    
+    <MapContain/>
     </div>
   );
 }
 
 export default App;
+
+
